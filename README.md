@@ -1,6 +1,6 @@
 # Microbundle example to preserve normal default export in CJS
 
-> TLDR - CJS build separately with different file that uses Object.assign to make the default import work
+> TLDR - Use Object.assign for CJS build to make the default import work in require()
 
 ```diff
 - const defaultFunc = require('my-package').default
