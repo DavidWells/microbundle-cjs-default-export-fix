@@ -2,11 +2,11 @@
 
 > TLDR - CJS build separately with different file that uses Object.assign to make the default import work
 
-```js
-const defaultFunc = require('my-package')
-// instead of defaultFunc.default 
+```diff
+- const defaultFunc = require('my-package').default
++ const defaultFunc = require('my-package')
 
-defaultFunc() // works!
+defaultFunc() // yay!
 ```
 
 ## Background
