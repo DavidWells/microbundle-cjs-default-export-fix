@@ -1,0 +1,25 @@
+{
+  "name": "micro-bundle-cjs-example",
+  "private": true,
+  "version": "2.1.10",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build-dot-default": "microbundle-crl src/index.js --no-compress",
+    "build": "npm run build-cjs && npm run build-module",
+    "build-cjs": "microbundle-crl -f cjs,umd src/index.cjs.js --no-compress",
+    "build-module": "microbundle-crl -f es,modern src/index.js --no-compress",
+    "start": "microbundle-crl watch -f cjs,umd"
+  },
+  "devDependencies": {
+    "microbundle-crl": "^0.13.10"
+  },
+  "files": [
+    "dist"
+  ]
+}
