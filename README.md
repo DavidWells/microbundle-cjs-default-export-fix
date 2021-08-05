@@ -8,3 +8,7 @@ const defaultFunc = require('my-package')
 
 defaultFunc() // works!
 ```
+
+## Background
+
+https://github.com/developit/microbundle/issues/712
